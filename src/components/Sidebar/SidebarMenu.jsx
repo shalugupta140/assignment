@@ -10,13 +10,9 @@ const menu = {
 
 const SidebarMenu = ({ route, setIsOpen }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    setIsOpen(true);
-  };
   return (
     <>
-      <div className="menu" onClick={toggleMenu}>
+      <div className="menu">
         <div className="menu_item">
           <div className="icon">{route.icon}</div>
         </div>
@@ -27,7 +23,7 @@ const SidebarMenu = ({ route, setIsOpen }) => {
             initial="hidden"
             className="menu_container"
           >
-            {route.subRoutes.map((subRoute, i) => (
+            {route.subRoutes.map((subRoute) => (
                 <NavLink to={subRoute.path} className="link">
                   <div className="icon">{subRoute.icon}</div>
                   <div className="link_text">{subRoute.name}</div>
