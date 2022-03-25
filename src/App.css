@@ -18,7 +18,7 @@
   color: #fff;
 }
 .sidebar {
-  height: 100vh;
+  height: 100%vh;
   left: 0px;
   top: 0px;
   background: #262626;
